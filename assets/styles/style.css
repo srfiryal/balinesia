@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap");
+
+/* Common Desktop */
+
+:root {
+  --primary: #b82a0b;
+  --primary-gradient: #eb623e;
+  --accent: #ff9b28;
+  --accent-gradient: #e28821;
+  --text-body: #131414;
+  --grey: #d3d3d3;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 400 !important;
+  color: var(--text-body) !important;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 1920px !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0 !important;
+  margin: 0 !important;
+  color: var(--text-body) !important;
+}
+
+h1 {
+  font-size: 3.2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+h2 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+h4 {
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+}
+
+h6 {
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+}
+
+p {
+  font-size: 1.05rem !important;
+}
+
+button {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  border-radius: 100rem !important;
+  padding: 0.8rem 2rem !important;
+}
+
+nav {
+  z-index: 100 !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin: 0 0.3rem;
+}
+
+ul li a {
+  color: var(--text-body) !important;
+  font-weight: 500 !important;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline !important;
+}
+
+.soft-shadow {
+  box-shadow: 0px 4px 25px -3px rgba(0, 0, 0, 0.15) !important;
+}
+
+.default-padding {
+  padding: 0 10rem !important;
+  max-width: 250rem;
+}
+
+.btn-filled-primary {
+  background-color: var(--primary) !important;
+  color: white !important;
+  transition-duration: 0.5s;
+  transition-property: transform;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+}
+
+.btn-filled-primary:hover {
+  transform: translateY(-6px);
+  transition: 0.3s ease-out;
+  animation-name: btn-hover;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes btn-hover {
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.btn-outline-primary {
+  border-color: var(--primary) !important;
+  background-color: transparent !important;
+  color: var(--primary) !important;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--primary) 0%,
+    var(--primary-gradient) 100%
+  );
+}
+
+.rounded-sm {
+  border-radius: 12px;
+}
+
+.rounded-md {
+  border-radius: 24px;
+}
+
+.section-title-img {
+  width: 7.5rem !important;
+}
+
+.color-primary {
+  color: var(--primary) !important;
+}
+
+.text-accent-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    var(--accent-gradient) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-small {
+  font-size: 1rem !important;
+}
+
+.text-x-small {
+  font-size: 0.75rem !important;
+}
+
+.text-logo {
+  letter-spacing: -0.08rem;
+}
+
+.z--10 {
+  z-index: -10 !important;
+}
+
+hr {
+  border-top: 2px var(--grey) solid !important;
+}
+
+.vr {
+  border-left: 2px var(--grey) solid !important;
+}
+
+.reveal {
+  position: relative;
+  transform: translateX(-25px);
+  opacity: 0;
+  filter: blur(3px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+  filter: blur(0px);
+}
+
+/* Grid Card */
+
+.grid-card:nth-child(2) div,
+.grid-card:nth-child(5) div {
+  transition-delay: 200ms;
+}
+
+.grid-card:nth-child(3) div {
+  transition-delay: 400ms;
+}
+
+.grid-card .destinations-card-content {
+  margin: 0.1rem !important;
+}
+
+.grid-card .destinations-card-content p {
+  margin-top: 0.7rem !important;
+  line-height: 130%;
+}
+
+.grid-card:hover div {
+  cursor: pointer;
+}
+
+.grid-card div div img {
+  transform: scale(1) rotate(0deg);
+  transition: 0.3s ease-in-out;
+}
+
+.grid-card:hover div div img {
+  transform: scale(1.1) rotate(-2deg);
+  transition: 0.3s ease-in-out;
+}
+
+/* Navbar Desktop */
+
+#nav #nav-logo-img {
+  height: 1.8rem;
+}
+
+#nav .nav-item {
+  margin: 0rem 0.8rem !important;
+}
+
+/* Hero Desktop */
+
+#hero {
+  margin-top: 6rem;
+  height: 80vh;
+  max-height: 720px;
+  overflow-x: clip;
+}
+
+#hero #hero-content {
+  height: 80vh;
+}
+
+#hero #hero-img-1 {
+  width: 27%;
+  padding: 0;
+  z-index: 10 !important;
+}
+
+#hero #hero-img-2 {
+  width: 24.5%;
+  padding: 0;
+  z-index: 10 !important;
+}
+
+/* About Desktop */
+
+#about {
+  position: relative;
+  z-index: 30 !important;
+}
+
+#about #about-description {
+  line-height: 150%;
+}
+
+/* Destinations Desktop */
+
+#destinations .bg-batik-top {
+  top: 22rem;
+  width: 14rem;
+}
+
+#destinations .bg-batik-bottom {
+  bottom: 28rem;
+  width: 24rem;
+  opacity: 0.75;
+}
+
+/* Culinary Desktop */
+
+#culinary #culinary-location-img {
+  height: 28rem;
+}
+
+#culinary #culinary-background-img {
+  width: fit-content;
+  height: 16rem;
+}
+
+/* Traditions Desktop */
+
+#traditions #traditions-banner {
+  height: 8rem;
+}
+
+#traditions #traditions-img {
+  width: 11rem;
+  height: 11rem;
+  margin-top: 4rem;
+  border: 5px solid white;
+}
+
+#traditions #traditions-details {
+  margin-top: 7rem;
+}
+
+#traditions #traditions-details .traditions-social-icon {
+  width: 2.5rem;
+}
+
+#traditions .traditions-background-img {
+  width: 32%;
+}
+
+/* Footer Desktop */
+
+#footer #footer-logo img {
+  width: 3rem;
+}
+
+#footer .footer-shadow {
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* Tablet Responsive */
+
+@media only screen and (max-width: 768px) {
+  /* Common Tablet */
+
+  .default-padding {
+    padding: 0 4rem !important;
+  }
+
+  /* Grid Card */
+
+  .grid-card .destinations-card-image {
+    height: 14rem;
+  }
+
+  .grid-card .destinations-card-content {
+    margin: 0.5rem !important;
+  }
+
+  /* Navbar Tablet */
+
+  .nav-item {
+    margin: 0.4rem 0rem !important;
+  }
+
+  .nav-item a p {
+    font-size: 1.1rem !important;
+  }
+
+  /* Hero Tablet */
+
+  #hero {
+    margin-top: 8rem;
+    height: 70vh;
+  }
+
+  #hero #hero-content {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+    height: 70vh;
+  }
+
+  #hero #hero-img-1 {
+    width: 20rem;
+    left: -6rem;
+    bottom: -2rem !important;
+    overflow: hidden;
+  }
+
+  #hero #hero-img-2 {
+    width: 18rem;
+    right: -4.5rem !important;
+    bottom: -2.5rem !important;
+  }
+
+  #hero #hero-background-img {
+    object-fit: cover;
+    height: 45rem !important;
+  }
+
+  /* Destinations Tablet */
+  #destinations .bg-batik-top {
+    top: 17rem;
+    width: 12rem;
+  }
+
+  #destinations .bg-batik-bottom {
+    bottom: 22.5rem;
+    width: 18rem;
+  }
+
+  /* Culinary Tablet */
+
+  #culinary #culinary-location-img {
+    height: 20rem;
+  }
+
+  #culinary #culinary-background-img {
+    height: 15.5rem;
+  }
+
+  /* Traditions Tablet */
+
+  #traditions .traditions-background-img {
+    width: 46%;
+  }
+
+  /* Footer Tablet */
+
+  #footer #footer-logo img {
+    width: 2.25rem;
+  }
+
+  #footer #footer-logo h3 {
+    font-size: 1.4rem !important;
+  }
+}
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 576px) {
+  /* Common Mobile */
+
+  .default-padding {
+    padding: 0 2rem !important;
+  }
+
+  h1 {
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+  }
+
+  h2 {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+  }
+
+  h3 {
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+  }
+
+  h4 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+  }
+
+  p {
+    font-size: 0.9rem !important;
+  }
+
+  /* Grid Card */
+
+  .grid-card .destinations-card-image {
+    height: 12rem;
+  }
+
+  .grid-card .destinations-card-content {
+    margin: 1.2rem !important;
+  }
+
+  /* Hero Mobile */
+
+  #hero {
+    margin-top: 10rem;
+    height: 70vh;
+  }
+
+  #hero #hero-background-img {
+    object-fit: cover;
+    height: 39rem !important;
+  }
+
+  #hero #hero-content {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+  }
+
+  /* Destinations Mobile */
+
+  #destinations .bg-batik-top {
+    top: 21rem;
+    width: 15rem;
+  }
+
+  #destinations .bg-batik-bottom {
+    bottom: 22rem;
+    width: 22rem;
+  }
+
+  /* Culinary Mobile */
+
+  #culinary #culinary-location-img {
+    height: 16rem;
+  }
+
+  /* Traditions Mobile */
+
+  #traditions #traditions-banner {
+    height: 6rem;
+  }
+
+  #traditions #traditions-img {
+    width: 8rem;
+    height: 8rem;
+    margin-top: 3rem;
+  }
+
+  #traditions #traditions-details {
+    margin-top: 5.3rem;
+  }
+
+  #traditions #traditions-details #traditions-institute {
+    text-align: left;
+    width: 10.1rem;
+    margin-left: 0.8rem !important;
+  }
+
+  #traditions #traditions-details .traditions-social-icon {
+    width: 2.3rem;
+  }
+}

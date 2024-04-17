@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balinesia</title>
+    <script defer src="./assets/scripts/script.js"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/images/ic-app.svg" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- Navbar Section -->
+    <nav
+      id="nav"
+      class="navbar wrapper navbar-expand-lg py-3 default-padding position-fixed start-0 end-0 d-block w-100 bg-white"
+      style="z-index: 100"
+    >
+      <div class="container-fluid p-0">
+        <!-- Navbar Logo -->
+        <a class="navbar-brand m-0 p-0" onclick="navigateTo('hero')">
+          <div class="d-flex align-items-center">
+            <img
+              id="nav-logo-img"
+              class="me-3"
+              src="./assets/images/ic-app.svg"
+            />
+            <h4 class="text-logo mt-1">Balinesia</h4>
+          </div>
+        </a>
+
+        <!-- Navbar Menu Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse py-md-1 me-md-4" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto me-lg-3 my-2 my-lg-0 my-md-4 w-100 justify-content-center"
+          >
+            <li class="nav-item">
+              <a class="nav-link" onclick="navigateTo('hero')"
+                ><p class="text-small">Beranda</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="navigateTo('about')"
+                ><p class="text-small">Tentang</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="navigateTo('destinations')"
+                ><p class="text-small">Destinasi</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="navigateTo('culinary')"
+                ><p class="text-small">Kuliner</p></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="navigateTo('traditions')"
+                ><p class="text-small">Tradisi</p></a
+              >
+            </li>
+          </ul>
+          <button class="btn btn-outline-primary">Daftar</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <!-- Hero Section -->
+      <header id="hero" class="flex-grow-1 position-relative">
+        <div class="w-100">
+          <!-- Hero Content -->
+          <div
+            id="hero-content"
+            class="reveal default-padding text-center d-flex flex-column justify-content-center align-items-center"
+          >
+            <h6>Balinesia Travel dan Pariwisata</h6>
+            <div class="row mt-4 pb-2 pb-lg-5 px-4">
+              <div class="col-lg-8 col-md mx-auto px-lg-5">
+                <h1 class="w-100 text-center">
+                  Jelajahi Pesona Budaya dan Keindahan Alam Bali
+                </h1>
+              </div>
+            </div>
+            <button
+              class="btn btn-filled-primary soft-shadow mt-lg-3 mt-5"
+              onclick="navigateTo('about')"
+            >
+              Jelajahi Sekarang
+            </button>
+          </div>
+
+          <!-- Hero Decorative Images -->
+          <div class="row">
+            <img
+              id="hero-img-1"
+              class="position-absolute d-none d-md-block bottom-0 me-auto z--10"
+              src="./assets/images/img-hero-1.svg"
+              alt="Hero 1"
+            />
+            <img
+              id="hero-img-2"
+              class="position-absolute d-none d-md-block bottom-0 end-0 z--10"
+              src="./assets/images/img-hero-2.svg"
+              alt="Hero 2"
+            />
+          </div>
+
+          <!-- Hero Background Images -->
+          <img
+            id="hero-background-img"
+            class="position-absolute bottom-0 w-100 z--10"
+            src="./assets/images/bg-hero.svg"
+            alt="Hero Background"
+          />
+
+          <!-- Section Divider -->
+          <img
+            src="./assets/images/img-divider-1.svg"
+            alt="Divider 1"
+            class="w-100 position-absolute bottom-0"
+            style="z-index: 30 !important"
+          />
+        </div>
+      </header>
+
+      <!-- About Section -->
+      <section
+        id="about"
+        class="bg-primary-gradient default-padding py-lg-5 py-md-4 py-3"
+      >
+        <div
+          class="row text-white text-center my-lg-5 my-md-5 py-lg-1 py-md-1 py-5"
+        >
+          <div class="col-lg-10 col-md-12 mx-auto reveal">
+            <!-- About Title -->
+            <div class="d-flex justify-content-center mb-4">
+              <img
+                class="section-title-img d-none d-md-block"
+                src="./assets/images/img-title-white-start.svg"
+                alt="Title 1"
+              />
+              <h2 class="mx-4 text-white text-center">Kenali Pulau Dewata</h2>
+              <img
+                class="section-title-img d-none d-md-block"
+                src="./assets/images/img-title-white-end.svg"
+                alt="Title 2"
+              />
+            </div>
+
+            <!-- About Description -->
+            <p id="about-description" class="text-white">
+              Bali adalah sebuah pulau di Indonesia yang terletak di ujung barat
+              Kepulauan Nusa Tenggara, terletak di antara Jawa di barat dan
+              Lombok di timur. Pulau Bali terkenal dengan keindahan alamnya yang
+              memukau, budaya yang kaya, serta keramahan penduduknya. Bali
+              sering disebut sebagai "Pulau Dewata" karena dianggap sebagai
+              tempat yang dihuni oleh para dewa dalam kepercayaan Hindu Bali.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Destinations Section -->
+      <section id="destinations" class="position-relative">
+        <!-- Section Divider -->
+        <img
+          class="w-100"
+          src="./assets/images/img-divider-2.svg"
+          alt="Divider 2"
+        />
+
+        <div class="default-padding py-5 mt-4 mt-md-5 mb-lg-1 mb-md-1">
+          <!-- Destinations Title -->
+          <div
+            class="d-flex justify-content-center mb-lg-5 mb-md-5 mb-4 pb-1 pb-lg-0 pb-md-0"
+          >
+            <img
+              class="section-title-img d-none d-md-block"
+              src="./assets/images/img-title-accent-start.svg"
+              alt="Title 1"
+            />
+            <h2 class="mx-4 text-accent-gradient text-center">
+              Telusuri Destinasi Memukau
+            </h2>
+            <img
+              class="section-title-img d-none d-md-block"
+              src="./assets/images/img-title-accent-end.svg"
+              alt="Title 2"
+            />
+          </div>
+
+          <!-- Destinations Grid -->
+          <div class="w-100 p-0">
+            <div class="row gy-5 justify-content-center">
+              <div class="col-lg-4 col-md-6 grid-card">
+                <div
+                  id="destinations-tanah-lot"
+                  class="reveal bg-white rounded-md soft-shadow overflow-hidden p-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="destinations-card-image w-100 object-fit-cover"
+                      src="./assets/images/img-tanah-lot.svg"
+                    />
+                  </div>
+                  <div class="p-lg-4 p-md-3 destinations-card-content">
+                    <h4>Tanah Lot</h4>
+                    <p>
+                      Formasi batu unik dan indah yang menjadi rumah bagi candi
+                      ziarah Hindu kuno.
+                    </p>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="px-4 py-3">
+                    <a href="#" class="text-decoration-none"
+                      ><div class="d-flex">
+                        <p class="color-primary">Selengkapnya</p>
+                        <img
+                          class="ms-2"
+                          src="./assets/images/ic-arrow-right.svg"
+                          alt="Arrow"
+                        /></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 grid-card">
+                <div
+                  id="destinations-pantai-canggu"
+                  class="reveal bg-white rounded-md soft-shadow overflow-hidden p-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="destinations-card-image w-100 object-fit-cover"
+                      src="./assets/images/img-pantai-canggu.svg"
+                    />
+                  </div>
+                  <div class="p-lg-4 p-md-3 destinations-card-content">
+                    <h4>Pantai Canggu</h4>
+                    <p>
+                      Dengan ombak memukau dan pemandangan indah, pantai ini
+                      cocok untuk berselancar.
+                    </p>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="px-4 py-3">
+                    <a href="#" class="text-decoration-none"
+                      ><div class="d-flex">
+                        <p class="color-primary">Selengkapnya</p>
+                        <img
+                          class="ms-2"
+                          src="./assets/images/ic-arrow-right.svg"
+                          alt="Arrow"
+                        /></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 grid-card">
+                <div
+                  id="destinations-bedugul"
+                  class="reveal bg-white rounded-md soft-shadow overflow-hidden p-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="destinations-card-image w-100 object-fit-cover"
+                      src="./assets/images/img-bedugul.svg"
+                    />
+                  </div>
+                  <div class="p-lg-4 p-md-3 destinations-card-content">
+                    <h4>Bedugul</h4>
+                    <p>
+                      Daerah resor di pegunungan dan danau, yang kerap dituju
+                      untuk melepas jenuh.
+                    </p>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="px-4 py-3">
+                    <a href="#" class="text-decoration-none"
+                      ><div class="d-flex">
+                        <p class="color-primary">Selengkapnya</p>
+                        <img
+                          class="ms-2"
+                          src="./assets/images/ic-arrow-right.svg"
+                          alt="Arrow"
+                        /></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 grid-card">
+                <div
+                  id="destinations-garuda-wisnu"
+                  class="reveal bg-white rounded-md soft-shadow overflow-hidden p-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="destinations-card-image w-100 object-fit-cover"
+                      src="./assets/images/img-garuda-wisnu.svg"
+                    />
+                  </div>
+                  <div class="p-lg-4 p-md-3 destinations-card-content">
+                    <h4>Garuda Wisnu Kencana</h4>
+                    <p>
+                      Taman budaya yang menampilkan patung Dewa Wisnu naik di
+                      atas Garudanya.
+                    </p>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="px-4 py-3">
+                    <a href="#" class="text-decoration-none"
+                      ><div class="d-flex">
+                        <p class="color-primary">Selengkapnya</p>
+                        <img
+                          class="ms-2"
+                          src="./assets/images/ic-arrow-right.svg"
+                          alt="Arrow"
+                        /></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 grid-card">
+                <div
+                  id="destinations-pura-besakih"
+                  class="reveal bg-white rounded-md soft-shadow overflow-hidden p-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="destinations-card-image w-100 object-fit-cover"
+                      src="./assets/images/img-pura-besakih.svg"
+                    />
+                  </div>
+                  <div class="p-lg-4 p-md-3 destinations-card-content">
+                    <h4>Pura Agung Besakih</h4>
+                    <p>
+                      Candi paling penting, terbesar, dan paling agung dalam
+                      agama Hindu Bali.
+                    </p>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="px-4 py-3">
+                    <a href="#" class="text-decoration-none"
+                      ><div class="d-flex">
+                        <p class="color-primary">Selengkapnya</p>
+                        <img
+                          class="ms-2"
+                          src="./assets/images/ic-arrow-right.svg"
+                          alt="Arrow"
+                        /></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Destinations Background Images Top -->
+        <div class="w-100 z--10 position-absolute top-0">
+          <img
+            class="bg-batik-top position-absolute start-0 mt-5"
+            src="./assets/images/bg-batik-top-1.svg"
+            alt="Background "
+          />
+          <img
+            class="bg-batik-top position-absolute end-0 mt-5 d-none d-md-block d-lg-block"
+            src="./assets/images/bg-batik-top-2.svg"
+            alt="Background"
+          />
+        </div>
+
+        <!-- Destinations Background Images Bottom -->
+        <div class="w-100 z--10 position-absolute bottom-0">
+          <img
+            class="bg-batik-bottom position-absolute start-0 mt-5 d-none d-md-block d-lg-block"
+            src="./assets/images/bg-batik-bottom-1.svg"
+            alt="Background "
+          />
+          <img
+            class="bg-batik-bottom position-absolute end-0 mt-5"
+            src="./assets/images/bg-batik-bottom-2.svg"
+            alt="Background"
+          />
+        </div>
+
+        <!-- Section Divider -->
+        <img
+          class="w-100 mt-3 pt-4"
+          src="./assets/images/img-divider-1.svg"
+          alt="Divider 2"
+        />
+      </section>
+
+      <!-- Culinary Section -->
+      <section
+        id="culinary"
+        class="bg-primary-gradient default-padding pt-2 pb-5"
+      >
+        <div class="w-100 my-5 py-lg-5 py-md-4">
+          <!-- Culinary Title -->
+          <div
+            class="d-flex justify-content-center mb-lg-5 mb-md-5 mb-4 pb-1 text-white text-center"
+          >
+            <img
+              class="section-title-img d-none d-md-block"
+              src="./assets/images/img-title-white-start.svg"
+              alt="Title 1"
+            />
+            <h2 class="mx-4 text-white text-center">
+              Nikmati Kelezatan Kuliner
+            </h2>
+            <img
+              class="section-title-img d-none d-md-block"
+              src="./assets/images/img-title-white-end.svg"
+              alt="Title 2"
+            />
+          </div>
+
+          <div
+            class="rounded-md soft-shadow bg-white w-100 p-0 overflow-hidden"
+          >
+            <div class="row p-0 g-0 position-relative">
+              <!-- Culinary Location Image -->
+              <div class="col-lg col-md-12">
+                <img
+                  id="culinary-location-img"
+                  class="w-100 object-fit-cover"
+                  src="./assets/images/img-kuliner.svg"
+                  alt="Kuliner"
+                />
+              </div>
+
+              <!-- Culinary Details -->
+              <div class="col-lg col-md-12 my-auto">
+                <div class="p-4 ms-lg-3 m-md-2 reveal">
+                  <h3>Rasakan cita rasa kuliner yang lezat!</h3>
+                  <p class="mt-4 mb-2">
+                    Coba hidangan eksotis seperti Sate Lilit, Lawar, Ayam
+                    Betutu, dan banyak lagi!
+                  </p>
+                  <p>
+                    Dikenal dengan penggunaan beragam rempah-rempah, tradisi
+                    kuliner Bali kaya akan cita rasa dan penuh warna yang
+                    mencerminkan warisan budaya yang kaya dari pulau Bali.
+                  </p>
+                  <button class="btn btn-filled-primary mt-5">
+                    Telusuri Kuliner
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Traditions Section -->
+      <section id="traditions" class="position-relative">
+        <!-- Section Divider -->
+        <img
+          class="w-100"
+          src="./assets/images/img-divider-2.svg"
+          alt="Divider 2"
+        />
+
+        <div class="default-padding pt-4 pb-5 mt-lg-1 mt-md-1 mt-2">
+          <!-- Traditions Title -->
+          <div class="d-flex justify-content-center mb-lg-5 mb-md-5 mb-4">
+            <img
+              class="section-title-img d-none d-md-block"
+              src="./assets/images/img-title-accent-start.svg"
+              alt="Title 1"
+            />
+            <h2 class="mx-4 text-accent-gradient text-center">
+              Saksikan Tradisi Kebudayaan
+            </h2>
+            <img
+              class="section-title-img d-none d-md-block"
+              src="./assets/images/img-title-accent-end.svg"
+              alt="Title 2"
+            />
+          </div>
+
+          <!-- Traditions Grid -->
+          <div class="w-100 p-0 pb-5 mb-2">
+            <div class="row gy-5 justify-content-center">
+              <div class="col-lg-4 col-md-6 grid-card">
+                <div
+                  id="traditions-ogoh-ogoh"
+                  class="reveal bg-white rounded-md soft-shadow overflow-hidden p-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="destinations-card-image w-100 object-fit-cover"
+                      src="./assets/images/img-ogoh-ogoh.svg"
+                    />
+                  </div>
+                  <div class="p-lg-4 p-md-3 destinations-card-content">
+                    <h4>Parade Ogoh-Ogoh</h4>
+                    <p>
+                      Ritual tradisional untuk mengusir roh jahat dan energi
+                      negatif dari Pulau Bali.
+                    </p>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="px-4 py-3">
+                    <a href="#" class="text-decoration-none"
+                      ><div class="d-flex">
+                        <p class="color-primary">Selengkapnya</p>
+                        <img
+                          class="ms-2"
+                          src="./assets/images/ic-arrow-right.svg"
+                          alt="Arrow"
+                        /></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 grid-card">
+                <div
+                  id="traditions-tari-kecak"
+                  class="reveal bg-white rounded-md soft-shadow overflow-hidden p-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="destinations-card-image w-100 object-fit-cover"
+                      src="./assets/images/img-tari-kecak.svg"
+                    />
+                  </div>
+                  <div class="p-lg-4 p-md-3 destinations-card-content">
+                    <h4>Tari Kecak</h4>
+                    <p>
+                      Seni cerita pementasan tradisional Bali yang menampilkan
+                      kisah Ramayana.
+                    </p>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="px-4 py-3">
+                    <a href="#" class="text-decoration-none"
+                      ><div class="d-flex">
+                        <p class="color-primary">Selengkapnya</p>
+                        <img
+                          class="ms-2"
+                          src="./assets/images/ic-arrow-right.svg"
+                          alt="Arrow"
+                        /></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 grid-card">
+                <div
+                  id="traditions-upacara-ngaben"
+                  class="reveal bg-white rounded-md soft-shadow overflow-hidden p-0"
+                >
+                  <div class="overflow-hidden">
+                    <img
+                      class="destinations-card-image w-100 object-fit-cover"
+                      src="./assets/images/img-ngaben.svg"
+                    />
+                  </div>
+                  <div class="p-lg-4 p-md-3 destinations-card-content">
+                    <h4>Upacara Ngaben</h4>
+                    <p>
+                      Upacara kremasi suci untuk mengirimkan arwah seseorang ke
+                      "kehidupan selanjutnya".
+                    </p>
+                  </div>
+                  <hr class="m-0" />
+                  <div class="px-4 py-3">
+                    <a href="#" class="text-decoration-none"
+                      ><div class="d-flex">
+                        <p class="color-primary">Selengkapnya</p>
+                        <img
+                          class="ms-2"
+                          src="./assets/images/ic-arrow-right.svg"
+                          alt="Arrow"
+                        /></div
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Traditions Background Images -->
+        <div
+          class="w-100 d-flex justify-content-between position-absolute bottom-0 z--10"
+        >
+          <img
+            class="traditions-background-img"
+            src="./assets/images/bg-tradition-1.svg"
+            alt="Background"
+          />
+          <img
+            class="traditions-background-img"
+            src="./assets/images/bg-tradition-2.svg"
+            alt="Background"
+          />
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer id="footer" class="w-100 footer-shadow">
+        <div class="px-0 py-4 w-100">
+          <div class="w-100 row default-padding mt-lg-2 mt-md-2">
+            <!-- Footer Logo -->
+            <div class="col-lg-5 col-md-4 mb-3 mb-lg-0 mb-md-0">
+              <div class="d-flex align-items-center" id="footer-logo">
+                <img src="./assets/images/ic-app.svg" />
+                <h3 class="text-logo ps-3 mt-1" style="cursor: default">
+                  Balinesia
+                </h3>
+              </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="my-3 my-md-0 my-lg-0 col-lg-4 col-md-4">
+              <p class="fw-bold ms-1 mt-lg-2 pt-1 mb-3">Tautan</p>
+              <ul class="m-0 p-0">
+                <li class="my-2">
+                  <a class="nav-link" onclick="navigateTo('hero')">Beranda</a>
+                </li>
+                <li class="my-2">
+                  <a class="nav-link" onclick="navigateTo('about')">Tentang</a>
+                </li>
+                <li class="my-2">
+                  <a class="nav-link" onclick="navigateTo('destinations')"
+                    >Destinasi</a
+                  >
+                </li>
+                <li class="my-2">
+                  <a class="nav-link" onclick="navigateTo('culinary')"
+                    >Kuliner</a
+                  >
+                </li>
+                <li class="my-2">
+                  <a class="nav-link" onclick="navigateTo('traditions')"
+                    >Tradisi</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Footer Contacts -->
+            <div class="my-3 my-md-0 my-lg-0 col-lg-3 col-md-4">
+              <p class="fw-bold ms-1 mt-lg-2 pt-1 mb-3">Kontak</p>
+              <ul class="m-0 p-0">
+                <li class="my-2"><a class="nav-link">(0361) 1234567</a></li>
+                <li class="my-2">
+                  <a class="nav-link">bantuan@balinesia.com</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Copyright -->
+        <div class="mt-lg-4 mt-md-4 pb-3">
+          <p class="text-center pb-4 text-small">
+            © 2023 Balinesia. All rights reserved
+          </p>
+        </div>
+      </footer>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
